@@ -32,8 +32,7 @@ public class Ejercicio9SimulacionDivision {
         dado que 11 es menor que 13, entonces: el residuo es 11 y el cociente es 3.
         ¿Aún no lo entendiste? Recomendamos googlear división con restas sucesivas.
         */
-        int cont,rest,cociente;
-        cont=0;
+        int rest,cociente;
         cociente=0;
         Scanner sc= new Scanner(System.in);
         System.out.println("Ingrese el dividendo");

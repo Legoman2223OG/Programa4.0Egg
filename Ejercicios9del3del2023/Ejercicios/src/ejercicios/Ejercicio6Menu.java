@@ -24,14 +24,13 @@ public class Ejercicio6Menu {
         Si el usuario selecciona el carácter ‘S’ se sale del programa, caso contrario 
         se vuelve a mostrar el menú.
         */
-        
         int num1,num2,opc;
         String opcSalir="";
         Scanner leer= new Scanner(System.in);
         System.out.println("Introduzca dos numeros: ");
         num1= leer.nextInt();
         num2= leer.nextInt();
-        while(true){
+        while(!opcSalir.equalsIgnoreCase("S")){
             System.out.println("Elige una opcion: ");
             System.out.println("-1 (Sumar)"
             +"\n-2 (Restar)"
@@ -62,7 +61,6 @@ public class Ejercicio6Menu {
                 default:
                     System.out.println("Elige una opcion correcta...");
             }
-            if(opcSalir.equals("S")) break;
         }
     }
 }
