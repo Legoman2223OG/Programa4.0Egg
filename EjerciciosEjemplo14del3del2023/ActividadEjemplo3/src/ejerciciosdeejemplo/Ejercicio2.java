@@ -31,6 +31,7 @@ public class Ejercicio2 {
         System.out.println("Ingrese el segundo numero");
         int num2= sc.nextInt();
         EsMultiplo(num1,num2);
+        
     }
     private static void EsMultiplo(int num1,int num2){
         if(num1 % num2==0) System.out.println("El primer numero es multiplo del segundo numero");
