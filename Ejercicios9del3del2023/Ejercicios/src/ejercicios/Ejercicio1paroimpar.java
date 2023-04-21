@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author mi tamura
  */
 public class Ejercicio1paroimpar {
-
+    
     /**
      * @param args the command line arguments
      */
