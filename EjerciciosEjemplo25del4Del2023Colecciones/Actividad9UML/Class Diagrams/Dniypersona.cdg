@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="Dni" package="ejercicioejemplo1" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="serie" type="String" visibility="package"/>
+        <Field name="numero" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="serie"/>
+          <Argument type="int" name="numero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getSerie" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="setSerie" returnType="void" visibility="public">
+          <Argument type="String" name="serie"/>
+        </Method>
+        <Method name="getNumero" returnType="int" visibility="public"/>
+        <Method name="setNumero" returnType="void" visibility="public">
+          <Argument type="int" name="numero"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="ejercicioejemplo1" visibility="public" xPosition="331.0" yPosition="55.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="package"/>
+        <Field name="dni" type="Dni" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="Dni" name="dni"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getDni" returnType="Dni" visibility="public"/>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="Dni" name="dni"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="dni" source="ejercicioejemplo1.Persona" target="ejercicioejemplo1.Dni" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejercicioejemplo1.Persona" target="ejercicioejemplo1.Dni" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

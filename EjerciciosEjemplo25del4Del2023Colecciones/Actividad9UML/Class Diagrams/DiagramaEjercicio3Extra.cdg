@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="DiagramaEjercicio3Extra">
+  <ClassDiagramComponents>
+    <Class name="Cliente" package="" visibility="public" xPosition="73.0" yPosition="16.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="documento" type="String" visibility="private"/>
+        <Field name="mail" type="String" visibility="private"/>
+        <Field name="domicilio" type="String" visibility="private"/>
+        <Field name="telefono" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Cliente" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="documento"/>
+          <Argument type="String" name="mail"/>
+          <Argument type="String" name="domicilio"/>
+          <Argument type="int" name="telefono"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Vehiculo" package="" visibility="public" xPosition="471.0" yPosition="30.0">
+      <Fields>
+        <Field name="marca" type="Marca" visibility="private"/>
+        <Field name="modelo" type="String" visibility="private"/>
+        <Field name="anio" type="int" visibility="private"/>
+        <Field name="nroMotor" type="int" visibility="private"/>
+        <Field name="chasis" type="String" visibility="private"/>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="tipo" type="TipoVehiculo" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Poliza" package="" visibility="public" xPosition="432.0" yPosition="271.0">
+      <Fields>
+        <Field name="vehiculos" type="ArrayList&lt;Vehiculo&gt;" visibility="private"/>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="nroPoliza" type="int" visibility="private"/>
+        <Field name="fechaInicio" type="Date" visibility="private"/>
+        <Field name="fechaFinal" type="Date" visibility="private"/>
+        <Field name="cantCuotas" type="int" visibility="private"/>
+        <Field name="formaDePago" type="FormaPago" visibility="private"/>
+        <Field name="montoTotalAsegurado" type="double" visibility="private"/>
+        <Field name="granizo" type="double" visibility="private"/>
+        <Field name="maximoGranizo" type="double" visibility="private"/>
+        <Field name="tipoCobertura" type="Cobertura" visibility="private"/>
+        <Field name="cuotas" type="HashSet&lt;Cuotas&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Cuota" package="" visibility="public" xPosition="73.0" yPosition="258.0">
+      <Fields>
+        <Field name="nroCuota" type="int" visibility="private"/>
+        <Field name="montoCuotaTotal" type="double" visibility="private"/>
+        <Field name="estaPagada" type="boolean" visibility="private"/>
+        <Field name="fechaVencimiento" type="Date" visibility="private"/>
+        <Field name="formaDePago" type="FormaPago" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Cuota" returnType="void" visibility="public">
+          <Argument type="int" name="nroCuota"/>
+          <Argument type="double" name="montoCuotaTotal"/>
+          <Argument type="boolean" name="estaPagada"/>
+          <Argument type="Date" name="fechaVencimiento"/>
+          <Argument type="FormaPago" name="formaDePago"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Empresa" package="" visibility="public" xPosition="73.0" yPosition="480.0">
+      <Fields>
+        <Field name="polizas" type="ArrayList&lt;Poliza&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="vehiculos" source="Poliza" target="Vehiculo" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="cuotas" source="Poliza" target="Cuota" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="polizas" source="Empresa" target="Poliza" type="Composition" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="cliente" source="Poliza" target="Cliente" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="DiagramaEjercicio4Extra">
+  <ClassDiagramComponents>
+    <Class name="Simulador" package="" visibility="public" xPosition="14.0" yPosition="-1.0">
+      <Fields>
+        <Field name="facilitadores" type="Alumno[]" visibility="private"/>
+        <Field name="facilitadoresSup" type="Alumno[]" visibility="private"/>
+        <Field name="votos" type="ArrayList&lt;Voto&gt;" visibility="private"/>
+        <Field name="nombres" type="ArrayList&lt;String&gt;" visibility="private"/>
+        <Field name="apellidos" type="ArrayList&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Simulador" returnType="void" visibility="public">
+          <Argument type="String[]" name="nombres"/>
+          <Argument type="String[]" name="apellidos"/>
+        </Method>
+        <Method name="generarListaDeAlumnos" returnType="ArrayList&lt;Alumno&gt;" visibility="public"/>
+        <Method name="generarDniAleatorio" returnType="String" visibility="public"/>
+        <Method name="verificarSiYaExisteDni" returnType="boolean" visibility="public">
+          <Argument type="ArrayList&lt;Alumno&gt;" name="alumnos"/>
+          <Argument type="String" name="dni"/>
+        </Method>
+        <Method name="ImprimirListaAlumnos" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Alumno&gt;" name="alumnos"/>
+        </Method>
+        <Method name="AsignarVotos" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Alumno&gt;" name="alumnos"/>
+        </Method>
+        <Method name="GenerarVotosAleatorios" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Alumno&gt;" name="alumnos"/>
+        </Method>
+        <Method name="MostrarAlumnoConSusVotosYVotados" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Alumno&gt;" name="alumnos"/>
+        </Method>
+        <Method name="conseguirVotoDeAlumno" returnType="Voto" visibility="public">
+          <Argument type="Alumno" name="alumno"/>
+        </Method>
+        <Method name="recuentoVotos" returnType="int" visibility="public">
+          <Argument type="ArrayList&lt;Alumno&gt;" name="alumnos"/>
+        </Method>
+        <Method name="promedioVotos" returnType="double" visibility="public">
+          <Argument type="ArrayList&lt;Alumno&gt;" name="alumnos"/>
+        </Method>
+        <Method name="AsignarInstructores" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Alumno&gt;" name="alumnos"/>
+        </Method>
+        <Method name="MostrarInstructores" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Voto" package="" visibility="public" xPosition="624.0" yPosition="18.0">
+      <Fields>
+        <Field name="votador" type="Alumno" visibility="private"/>
+        <Field name="votadosPorAlumno" type="HashSet&lt;Alumno&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Voto" returnType="void" visibility="public">
+          <Argument type="Alumno" name="alumno"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Alumno" package="" visibility="public" xPosition="508.0" yPosition="376.0">
+      <Fields>
+        <Field name="nombreCompleto" type="String" visibility="private"/>
+        <Field name="dni" type="String" visibility="private"/>
+        <Field name="cantVotos" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Alumno" returnType="void" visibility="public">
+          <Argument type="String" name="nombreCompleto"/>
+          <Argument type="String" name="dni"/>
+          <Argument type="int" name="cantvotos"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="Simulador" target="Alumno" sourceCardinality="1..*" targetCardinality="1..*"/>
+    <UseRelation name="" source="Voto" target="Alumno" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="votadosPorAlumno" source="Voto" target="Alumno" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="facilitadores" source="Simulador" target="Alumno" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="votos" source="Simulador" target="Voto" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="votador" source="Voto" target="Alumno" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="facilitadorSUp" source="Simulador" target="Alumno" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
