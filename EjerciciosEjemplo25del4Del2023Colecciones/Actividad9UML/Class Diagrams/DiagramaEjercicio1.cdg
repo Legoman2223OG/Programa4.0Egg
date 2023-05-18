@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="DiagramaEjercicio1">
+  <ClassDiagramComponents>
+    <Class name="Persona" package="" visibility="public" xPosition="45.0" yPosition="77.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="documento" type="String" visibility="private"/>
+        <Field name="perro" type="Perro" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Persona" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Perro" package="" visibility="public" xPosition="398.0" yPosition="77.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="raza" type="Raza" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="tamanio" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Perro" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="Raza" package="" visibility="public" xPosition="215.0" yPosition="327.0">
+      <Literals>
+        <Literal name="CORGI"/>
+        <Literal name="BORZOI"/>
+        <Literal name="DOGE"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="mascota" source="Persona" target="Perro" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..1"/>
+    <HasRelation name="raza" source="Perro" target="Raza" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

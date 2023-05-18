@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="DiagramaEjercicio2Extra">
+  <ClassDiagramComponents>
+    <Class name="Cine" package="" visibility="public" xPosition="34.0" yPosition="67.0">
+      <Fields>
+        <Field name="sala" type="Asiento[][]" visibility="private"/>
+        <Field name="pelicula" type="Pelicula" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Cine" returnType="void" visibility="public">
+          <Argument type="Pelicula" name="pelicula"/>
+        </Method>
+        <Method name="rellenarAsientos" returnType="Asiento[][]" visibility="public"/>
+        <Method name="UbicarEspectadorEnSala" returnType="void" visibility="public">
+          <Argument type="Espectador" name="espectador"/>
+        </Method>
+        <Method name="VerificarSiEstaLlenaLaSala" returnType="boolean" visibility="public"/>
+        <Method name="MostrarAsientosDeSala" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Asiento" package="" visibility="public" xPosition="18.0" yPosition="375.0">
+      <Fields>
+        <Field name="propietario" type="Espectador" visibility="private"/>
+        <Field name="idFila" type="int" visibility="private"/>
+        <Field name="idLetra" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Asiento" returnType="void" visibility="public">
+          <Argument type="Espectador" name="espectador"/>
+          <Argument type="int" name="idFila"/>
+          <Argument type="String" name="idLetra"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Espectador" package="" visibility="public" xPosition="507.0" yPosition="333.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="dinero" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Espectador" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="double" name="dinero"/>
+        </Method>
+        <Method name="crearEspectador" returnType="Espectador" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pelicula" package="" visibility="public" xPosition="433.0" yPosition="32.0">
+      <Fields>
+        <Field name="titulo" type="String" visibility="private"/>
+        <Field name="director" type="String" visibility="private"/>
+        <Field name="duracion" type="int" visibility="private"/>
+        <Field name="edadMinima" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Pelicula" returnType="void" visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="String" name="director"/>
+          <Argument type="int" name="duracion"/>
+          <Argument type="int" name="edadMinima"/>
+        </Method>
+        <Method name="crearPelicula" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="pelicula" source="Cine" target="Pelicula" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="rellenarAsientos" source="Cine" target="Asiento" sourceCardinality="1..*" targetCardinality="1..*"/>
+    <HasRelation name="asientos" source="Cine" target="Asiento" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="espectador" source="Asiento" target="Espectador" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..1"/>
+    <UseRelation name="" source="Cine" target="Espectador" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

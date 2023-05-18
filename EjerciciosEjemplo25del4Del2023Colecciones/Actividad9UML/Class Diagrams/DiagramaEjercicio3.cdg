@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="DiagramaEjercicio3">
+  <ClassDiagramComponents>
+    <Class name="Carta" package="" visibility="public" xPosition="51.0" yPosition="50.0">
+      <Fields>
+        <Field name="palo" type="Palo" visibility="private"/>
+        <Field name="numero" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Carta" returnType="void" visibility="public">
+          <Argument type="Palo" name="palo"/>
+          <Argument type="int" name="numero"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Baraja" package="" visibility="public" xPosition="265.0" yPosition="278.0">
+      <Fields>
+        <Field name="cartas" type="ArrayList&lt;Carta&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Baraja" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Carta&gt;" name="cartas"/>
+        </Method>
+        <Method name="barajar" returnType="void" visibility="public"/>
+        <Method name="siguienteCarta" returnType="void" visibility="public"/>
+        <Method name="cartasDisponibles" returnType="void" visibility="public"/>
+        <Method name="darCartas" returnType="void" visibility="public"/>
+        <Method name="cartasMonton" returnType="void" visibility="public"/>
+        <Method name="mostrarBaraja" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Palo" package="" visibility="public" xPosition="427.0" yPosition="55.0">
+      <Methods>
+        <Method name="ESPADAS" returnType="void" visibility="public"/>
+        <Method name="BASTOS" returnType="void" visibility="public"/>
+        <Method name="COPAS" returnType="void" visibility="public"/>
+        <Method name="OROS" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="cartas" source="Baraja" target="Carta" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="Palo" source="Carta" target="Palo" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="Carta" target="Palo" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
