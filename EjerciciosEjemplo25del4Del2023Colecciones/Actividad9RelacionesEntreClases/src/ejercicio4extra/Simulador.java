@@ -95,7 +95,18 @@ public class Simulador {
         }
         return null;
     }
-    private int recuentoVotos(ArrayList<Alumno> alumnos){
+    public void RecuentoVotos(ArrayList<Alumno> alumnos){
+        Alumno alumnoMasVotado= null;
+        int votoMasAlto= 0;
+        for(Alumno al: alumnos){
+            if(al.getCantVotos()>votoMasAlto){
+                votoMasAlto=al.getCantVotos();
+                alumnoMasVotado= al;
+            }
+        }
+        System.out.println("El alumno mas votado fue:\n "+alumnoMasVotado);
+    }
+    private int cantidadTotalVotos(ArrayList<Alumno> alumnos){
         int contador=0;
         for(Alumno alu: alumnos){
             contador+= alu.getCantVotos();
@@ -103,7 +114,7 @@ public class Simulador {
         return contador;
     }
     private double promedioVotos(ArrayList<Alumno> alumnos){
-        return recuentoVotos(alumnos)/alumnos.size();
+        return cantidadTotalVotos(alumnos)/alumnos.size();
     }
     public void AsignarInstructores(ArrayList<Alumno> alumnos){
         int contInstSup=0;

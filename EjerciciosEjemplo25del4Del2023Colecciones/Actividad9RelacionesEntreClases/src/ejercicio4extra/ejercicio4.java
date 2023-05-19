@@ -209,6 +209,7 @@ public class ejercicio4 {
     sm.MostrarAlumnoConSusVotosYVotados(alumnos);
     sm.AsignarInstructores(alumnos);
     sm.MostrarInstructores();
+    sm.RecuentoVotos(alumnos);
     }
     
 }
