@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio3Diagrama">
+  <ClassDiagramComponents>
+    <Interface name="calculoFormas" package="" visibility="public" xPosition="160.0" yPosition="146.0">
+      <Methods>
+        <Method name="calculoAreaCirculo" returnType="void" visibility="public"/>
+        <Method name="calculoAreaRectangulo" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

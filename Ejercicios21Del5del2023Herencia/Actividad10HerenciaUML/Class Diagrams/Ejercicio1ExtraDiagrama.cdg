@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio1Extra">
+  <ClassDiagramComponents>
+    <Class name="Alquiler" package="" visibility="public" xPosition="35.0" yPosition="80.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="documento" type="String" visibility="private"/>
+        <Field name="fechaAlquiler" type="Date" visibility="private"/>
+        <Field name="fechaDevolucion" type="Date" visibility="private"/>
+        <Field name="amarre" type="Amarre" visibility="private"/>
+        <Field name="barco" type="Barco" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Alquiler" returnType="void" visibility="public"/>
+        <Method name="Alquiler" returnType="Barco" visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="documento"/>
+          <Argument type="Date" name="fechaAlquiler"/>
+          <Argument type="Date" name="fechaDevolucion"/>
+          <Argument type="Amarre" name="amarre"/>
+          <Argument type="Barco" name="barco"/>
+        </Method>
+        <Method name="crearAlquiler" returnType="Alquiler" visibility="public"/>
+        <Method name="calcularPrecioFinal" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="Amarre" package="" visibility="public" xPosition="302.0" yPosition="-18.0">
+      <Literals>
+        <Literal name="AMARRE_UNICO"/>
+        <Literal name="BARCO_A_BARCO"/>
+        <Literal name="AMARRE_MULTIBOYA"/>
+        <Literal name="AMARRE_BALTICO"/>
+        <Literal name="AMARRE_MEDITERRANEO"/>
+        <Literal name="AMARRE_CON_ANCLA"/>
+      </Literals>
+    </Enum>
+    <Class name="Barco" package="" visibility="public" xPosition="532.0" yPosition="9.0">
+      <Fields>
+        <Field name="matricula" type="String" visibility="private"/>
+        <Field name="eslora" type="double" visibility="private"/>
+        <Field name="anioDeFabricacion" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Barco" returnType="Date" visibility="public">
+          <Argument type="String" name="matricula"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="Date" name="anioDeFabricacion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Velero" package="" visibility="public" xPosition="302.0" yPosition="239.0">
+      <Fields>
+        <Field name="numMastiles" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Velero" returnType="void" visibility="public">
+          <Argument type="String" name="matricula"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="Date" name="anioDeFabricacion"/>
+          <Argument type="int" name="numMastiles"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BarcoAMotor" package="" visibility="public" xPosition="480.0" yPosition="239.0">
+      <Fields>
+        <Field name="potencia" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="BarcoAMotor" returnType="void" visibility="public">
+          <Argument type="String" name="matricula"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="Date" name="anioDeFabricacion"/>
+          <Argument type="double" name="potencia"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Yate" package="" visibility="public" xPosition="665.0" yPosition="203.0">
+      <Fields>
+        <Field name="potencia" type="double" visibility="private"/>
+        <Field name="numCamarotes" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Yate" returnType="void" visibility="public">
+          <Argument type="String" name="matricula"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="Date" name="anioDeFabricacion"/>
+          <Argument type="double" name="potencia"/>
+          <Argument type="int" name="numCamarotes"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Amarre" source="Alquiler" target="Amarre" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Barco" source="Alquiler" target="Barco" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Velero" target="Barco"/>
+    <IsRelation name="is" source="Yate" target="Barco"/>
+    <IsRelation name="is" source="BarcoAMotor" target="Barco"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

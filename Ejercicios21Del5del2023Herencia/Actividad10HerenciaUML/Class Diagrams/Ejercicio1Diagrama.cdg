@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio1Diagrama">
+  <ClassDiagramComponents>
+    <Class name="Animal" package="" visibility="public" xPosition="111.0" yPosition="7.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="alimento" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="raza" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="alimento"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="raza"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Alimentarse" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Perro" package="" visibility="public" xPosition="-38.0" yPosition="261.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="alimento"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="raza"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Alimentarse" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Gato" package="" visibility="public" xPosition="276.0" yPosition="247.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="alimento"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="raza"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Alimentarse" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Caballo" package="" visibility="public" xPosition="500.0" yPosition="105.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="alimento"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="raza"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Alimentarse" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Caballo" target="Animal"/>
+    <IsRelation name="is" source="Gato" target="Animal"/>
+    <IsRelation name="is" source="Perro" target="Animal"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

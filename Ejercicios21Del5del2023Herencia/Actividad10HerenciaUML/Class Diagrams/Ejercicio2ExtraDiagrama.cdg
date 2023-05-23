@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio2ExtraDiagrama">
+  <ClassDiagramComponents>
+    <Class name="Edificio" package="" visibility="public" xPosition="21.0" yPosition="-38.0">
+      <Fields>
+        <Field name="ancho" type="double" visibility="private"/>
+        <Field name="alto" type="double" visibility="private"/>
+        <Field name="largo" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="ancho"/>
+          <Argument type="double" name="alto"/>
+          <Argument type="double" name="largo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Edificio" returnType="double" visibility="public">
+          <Argument type="double" name="ancho"/>
+          <Argument type="double" name="alto"/>
+          <Argument type="double" name="largo"/>
+        </Method>
+        <Method name="calcularSuperficie" returnType="Edificio" visibility="public">
+          <Argument type="Edificio" name="edificio"/>
+        </Method>
+        <Method name="calcularVolumen" returnType="Edificio" visibility="public">
+          <Argument type="Edificio" name="edificio"/>
+        </Method>
+        <Method name="cantPersonas" returnType="void" visibility="public">
+          <Argument type="EdificioDeOficinas" name="edificioDeOficinas"/>
+        </Method>
+        <Method name="verVolumenYSuperficieDeEdificios" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Edificio&gt;" name="listaEdificios"/>
+        </Method>
+        <Method name="verCantDeportivosConTechadoYDescubierto" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Edificio&gt;" name="listaEdificios"/>
+        </Method>
+        <Method name="verOficinasConSuCantidadDePersonas" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Edificio&gt;" name="listaEdificios"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Polideportivo" package="" visibility="public" xPosition="401.0" yPosition="28.0">
+      <Fields>
+        <Field name="tipoInstalacion" type="Instalacion" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="Instalacion" name="tipoInstalacion"/>
+          <Argument type="double" name="ancho"/>
+          <Argument type="double" name="alto"/>
+          <Argument type="double" name="largo"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="EdificioDeOficinas" package="" visibility="public" xPosition="291.0" yPosition="266.0">
+      <Fields>
+        <Field name="nroOficinas" type="int" visibility="private"/>
+        <Field name="cantPersonas" type="int" visibility="private"/>
+        <Field name="nroPisos" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="nroOficinas"/>
+          <Argument type="int" name="cantPersonas"/>
+          <Argument type="int" name="nroPisos"/>
+          <Argument type="double" name="ancho"/>
+          <Argument type="double" name="alto"/>
+          <Argument type="double" name="largo"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Enum name="Instalacion" package="" visibility="public" xPosition="21.0" yPosition="239.0">
+      <Literals>
+        <Literal name="TECHADO"/>
+        <Literal name="ABIERTO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="instalacion" source="Polideportivo" target="Instalacion" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="EdificioDeOficinas" target="Edificio"/>
+    <IsRelation name="is" source="Polideportivo" target="Edificio"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
