@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="Empleado" package="ejercicio4extra" visibility="public" xPosition="818.0" yPosition="690.0">
+      <Fields>
+        <Field name="anioIncorporacionFacultad" type="Date" visibility="package"/>
+        <Field name="numeroDespacho" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Date" name="anioIncorporacionFacultad"/>
+          <Argument type="String" name="numeroDespacho"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="dni"/>
+          <Argument type="EstadoCivil" name="estadoCivil"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAnioIncorporacionFacultad" returnType="Date" visibility="public"/>
+        <Method name="setAnioIncorporacionFacultad" returnType="void" visibility="public">
+          <Argument type="Date" name="anioIncorporacionFacultad"/>
+        </Method>
+        <Method name="getNumeroDespacho" returnType="String" visibility="public"/>
+        <Method name="setNumeroDespacho" returnType="void" visibility="public">
+          <Argument type="String" name="numeroDespacho"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Estudiante" package="ejercicio4extra" visibility="public" xPosition="370.0" yPosition="20.0">
+      <Fields>
+        <Field name="curso" type="Curso" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Curso" name="curso"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="dni"/>
+          <Argument type="EstadoCivil" name="estadoCivil"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCurso" returnType="Curso" visibility="public"/>
+        <Method name="setCurso" returnType="void" visibility="public">
+          <Argument type="Curso" name="curso"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="ejercicio4extra" visibility="public" xPosition="933.0" yPosition="58.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="package"/>
+        <Field name="estadoCivil" type="EstadoCivil" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="dni"/>
+          <Argument type="EstadoCivil" name="estadoCivil"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getDni" returnType="String" visibility="public"/>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="String" name="dni"/>
+        </Method>
+        <Method name="getEstadoCivil" returnType="EstadoCivil" visibility="public"/>
+        <Method name="setEstadoCivil" returnType="void" visibility="public">
+          <Argument type="EstadoCivil" name="estadoCivil"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PersonalDeServicio" package="ejercicio4extra" visibility="public" xPosition="1411.0" yPosition="84.0">
+      <Fields>
+        <Field name="sector" type="Sector" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Sector" name="sector"/>
+          <Argument type="Date" name="anioIncorporacionFacultad"/>
+          <Argument type="String" name="numeroDespacho"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="dni"/>
+          <Argument type="EstadoCivil" name="estadoCivil"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getSector" returnType="Sector" visibility="public"/>
+        <Method name="setSector" returnType="void" visibility="public">
+          <Argument type="Sector" name="sector"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Profesor" package="ejercicio4extra" visibility="public" xPosition="2166.0" yPosition="388.0">
+      <Fields>
+        <Field name="departamento" type="Curso" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Curso" name="departamento"/>
+          <Argument type="Date" name="anioIncorporacionFacultad"/>
+          <Argument type="String" name="numeroDespacho"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="dni"/>
+          <Argument type="EstadoCivil" name="estadoCivil"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDepartamento" returnType="Curso" visibility="public"/>
+        <Method name="setDepartamento" returnType="void" visibility="public">
+          <Argument type="Curso" name="departamento"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="Curso" package="ejercicio4extra" visibility="public" xPosition="92.0" yPosition="590.0">
+      <Literals>
+        <Literal name="MATEMATICA"/>
+        <Literal name="LENGUAJE"/>
+        <Literal name="ARQUITECTURA"/>
+        <Literal name="FISICA"/>
+        <Literal name="PROGRAMACION"/>
+      </Literals>
+    </Enum>
+    <Enum name="EstadoCivil" package="ejercicio4extra" visibility="public" xPosition="20.0" yPosition="293.0">
+      <Literals>
+        <Literal name="CASADO"/>
+        <Literal name="SOLTERO"/>
+      </Literals>
+    </Enum>
+    <Enum name="Sector" package="ejercicio4extra" visibility="public" xPosition="1978.0" yPosition="736.0">
+      <Literals>
+        <Literal name="BIBLIOTECA"/>
+        <Literal name="DECANATO"/>
+        <Literal name="SECRETARIA"/>
+        <Literal name="PORTERO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="curso" source="ejercicio4extra.Estudiante" target="ejercicio4extra.Curso" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejercicio4extra.Profesor" target="ejercicio4extra.Curso" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejercicio4extra.Persona" target="ejercicio4extra.EstadoCivil" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sector" source="ejercicio4extra.PersonalDeServicio" target="ejercicio4extra.Sector" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="departamento" source="ejercicio4extra.Profesor" target="ejercicio4extra.Curso" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="ejercicio4extra.Profesor" target="ejercicio4extra.Empleado"/>
+    <IsRelation name="is" source="ejercicio4extra.PersonalDeServicio" target="ejercicio4extra.Empleado"/>
+    <UseRelation source="ejercicio4extra.Estudiante" target="ejercicio4extra.Curso" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="ejercicio4extra.Empleado" target="ejercicio4extra.Persona"/>
+    <UseRelation source="ejercicio4extra.PersonalDeServicio" target="ejercicio4extra.Sector" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="estadoCivil" source="ejercicio4extra.Persona" target="ejercicio4extra.EstadoCivil" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="ejercicio4extra.Estudiante" target="ejercicio4extra.Persona"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
