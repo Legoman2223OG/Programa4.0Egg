@@ -11,4 +11,4 @@ https://www.youtube.com/watch?v=OhIqmXdcPIg
 # AVISO
 Apartir de la actividad 13, es necesario conocimientos de manejo de bases de datos y consultas con SQL.
 PD: La conexion esta hecha con MYSQL, tendran que descargar el driver de JDBC incluido en la carpeta (Una vez descargado debe ser ubicado en
-C:\Program Files\NetBeans (Numero de version)\ide\modules\ext).
+C:\Program Files\NetBeans (Numero de version)\ide\modules\ext), tambien van a tener que ejecutar un script en el workbench de mysql para crear una contraseña de MYSQL asi el driver puede obtener acceso a la base de datos (SCRIPT ALTER USER MYSQL) y una de base de datos para trabajar con los ejercicios.
