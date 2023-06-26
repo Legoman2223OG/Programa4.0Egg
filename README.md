@@ -10,4 +10,4 @@ https://www.youtube.com/watch?v=OhIqmXdcPIg
 
 # AVISO
 Apartir de la actividad 13, es necesario conocimientos de manejo de bases de datos y consultas con SQL.
-PD: La conexion esta hecha con MYSQL.
+PD: La conexion esta hecha con MYSQL, tendran que descargar el driver de JDBC incluido en la carpeta.
