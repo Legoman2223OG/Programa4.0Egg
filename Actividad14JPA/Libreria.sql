@@ -1,0 +1,2 @@
+ DROP DATABASE IF EXISTS Libreria;
+ CREATE DATABASE Libreria;
