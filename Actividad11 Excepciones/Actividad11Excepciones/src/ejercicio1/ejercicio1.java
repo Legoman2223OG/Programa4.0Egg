@@ -22,7 +22,7 @@ public class ejercicio1 {
         PD: Estas clases estan en la carpeta Ejercicios6 en el paquete ejercicio3.
         */
         Persona personaVacia=null;
-        PersonaServicio pSv= new PersonaServicio();
+        PersonaService pSv= new PersonaService();
         try{
             pSv.esMayorDeEdad(personaVacia);
         }
